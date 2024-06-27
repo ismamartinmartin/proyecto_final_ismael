@@ -3,12 +3,9 @@
     src: url('/fonts/JosefinSans-Medium.ttf');
 }
 
-h1, h2, h3, h4, p {
-    font-family: "Josefin Sans";
-}
-
-h1 {
-    font-size: 40px;
+@font-face{
+    font-family: "Josefin Sans Bold";
+    src: url('/fonts/JosefinSans-Bold.ttf');
 }
 
 * {
@@ -21,8 +18,54 @@ img {
     width: 100%;
 }
 
+h1 {
+    font-family: "Josefin Sans Bold";
+    font-size: 40px;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: "Josefin Sans Bold";
+    font-size: 35px;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: "Josefin Sans Bold";
+    font-size: 30px;
+    font-weight: 800;
+}
+
+h4 {
+    font-family: "Josefin Sans Bold";
+    font-size: 25px;
+    font-weight: 800;
+}
+
+h5 {
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+p {
+    font-family: "Josefin Sans";
+    font-size: 18px;
+    font-weight: 500;
+}
+
 a {
+    font-family: "Josefin Sans Bold";
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
+}
+
+.white__letter {
+    font-family: "Josefin Sans Bold";
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
 }
 
 .header {
