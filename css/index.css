@@ -1,12 +1,29 @@
+/*ROOT*/
+:root {
+    --standard-margin: 0 auto;
+    --standard-padding: 1em;
+    --standard-gap: 1em;
+    --standard-max-width: 1200px;
+    --standard-min-height: 800px;
+    --standard-min-height: 500px;
+    --standard-flex-basis: 0;
+    --standard-flex-grow: 1;
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
+/*FONTS*/
 @font-face{
-    font-family: "Josefin Sans";
-    src: url('/fonts/JosefinSans-Medium.ttf');
+    font-family: "krub_medium";
+    src: url('/fonts/Krub-Medium.ttf');
 }
 
 @font-face{
-    font-family: "Josefin Sans Bold";
-    src: url('/fonts/JosefinSans-Bold.ttf');
+    font-family: "krub_bold";
+    src: url('/fonts/Krub-Bold.ttf');
 }
+
+/*RESET CSS*/
 
 * {
     box-sizing: border-box;
@@ -18,40 +35,51 @@ img {
     width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+/*TIPOGRAPHY*/
+
 h1 {
-    font-family: "Josefin Sans Bold";
-    font-size: 40px;
+    font-family: "krub_bold";
+    font-size: 60px;
     font-weight: 800;
 }
 
 h2 {
-    font-family: "Josefin Sans Bold";
+    font-family: "krub_bold";
     font-size: 35px;
     font-weight: 800;
 }
 
 h3 {
-    font-family: "Josefin Sans Bold";
+    font-family: "krub_bold";
     font-size: 30px;
     font-weight: 800;
 }
 
 h4 {
-    font-family: "Josefin Sans Bold";
+    font-family: "krub_bold";
     font-size: 25px;
     font-weight: 800;
 }
 
 h5 {
-    font-family: "Josefin Sans";
+    font-family: "krub_medium";
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 p {
-    font-family: "Josefin Sans";
+    font-family: "krub_medium";
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 200;
+}
+
+.p__strong {
+    font-family: "krub_bold";
+    font-size: 18px;
 }
 
 a {
@@ -59,29 +87,205 @@ a {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    color: var(--color-black);
 }
 
-.white__letter {
-    font-family: "Josefin Sans Bold";
-    font-size: 40px;
+.gradient__h1 {
+    background: linear-gradient(163deg, rgba(240,223,118,1) 0%, rgba(171,63,24,1) 46%, rgba(109,2,17,1) 54%, rgba(60,4,43,1) 59%, rgba(0,4,101,1) 67%, rgba(42,110,123,1) 83%, rgba(80,208,144,1) 100%);
+    font-family: "krub_bold";
+    font-size: 60px;
     font-weight: 800;
     color: white;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
+/*STANDARD SECTION SIZE*/
+/*Utilizado para estandarizar las medidas de margen, padding y ancho en algunas seccione*/
+.standard__section--size {
+    max-width: var(--standard-max-width);
+    margin: var(--standard-margin);
+    padding: var(--standard-padding);
+}
+
+/*HEADER*/
 .header {
+    display: flex;
+    flex-direction: row;
+
+    min-height: 100px;
+    width: 100vw;
+}
+
+.header__content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 2em;
 }
 
-.header .header__icon {
+.header .header__content .header__content--socials {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    align-items: center;
+    justify-content: start;
+    gap: .1em;
+}
+
+.header .header__content .header__content--openModal {
+    cursor: pointer;
+}
+
+.header .header__modal {
+    display: none;
+    position: fixed;
+    top: 0;
+
+    background-color: rgba(67, 67, 67, 0.635);
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: opacityMenu .5s ease-in-out;
+}
+
+.header .header__modal .header__modal__content {
+    position: fixed;
+    top: 0;
+    left: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: start;
+    gap: 1em;
+
+    width: 70vw;
+    height: 100vh;
+
+    padding: 2em 2em;
+
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    animation: sideEffectMenu 2s ease-in-out;
+}
+
+.header .header__modal .header__modal__content .header__modal__content--close {
+    font-family: "krub_medium";
+    font-size: 40px;
+    font-weight: 200;
+
+    cursor: pointer;
+
+    animation: opacityMenu 3s ease-in-out;
+}
+
+.header .header__modal .header__modal__content .header__modal__content--links {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: var(--standard-gap);
+    padding: 0 2em;
+    animation: opacityMenu 3s ease-in-out;
+}
+
+.header .header__modal .header__modal__content .header__modal__content--links .header__modal__content--links--each {
+    color: var(--color-white);
+    font-family: "krub_bold";
+    font-size: 20px;
+    font-weight: 200;
+}
+
+@keyframes opacityMenu {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes sideEffectMenu {
+    0% {transform: translateX(2em); opacity: 0}
+    100% {transform: translateX(0); opacity: 1}
+}
+
+/*BANNER HOME*/
+
+.bannerHome {
+    width: 100vw;
+    height: var(--standard-min-height);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 
-    gap: 1em;
-    padding: auto;
+    background-color: var(--color-black);
 }
+
+.bannerHome .bannerHome__content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--standard-min-height);
+    width: 60vw;
+    padding-left: 10em;
+
+    color: white;
+
+    overflow: hidden;
+    animation: textContent 4s ease-in-out;
+}
+
+.bannerHome .bannerHome__colorSide {
+    background: url('/media/logo_gradient_color.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--standard-gap);
+
+    text-align: center;
+    color: var(--color-white);
+
+    height: var(--standard-min-height);
+    width: 40vw;
+
+    animation: sideColor 2s ease-in-out;
+}
+
+@keyframes sideColor {
+    from {width: 100vw;}
+    to {width: -30vw;}
+}
+
+@keyframes textContent {
+    0% {opacity: 0; padding-left: 0;}
+    25% {opacity: 0; padding-left: 0;}
+    50% {opacity: 0; padding-left: 10em;}
+    100% {opacity: 1;}
+}
+
+
+
+
+
+

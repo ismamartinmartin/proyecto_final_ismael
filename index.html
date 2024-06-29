@@ -5,25 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write me Worlds of Colors</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src=""></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
+    <!--HEADER-->
     <header class="header">
-        <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M4 6l16 0" />
-            <path d="M4 12l16 0" />
-            <path d="M4 18l16 0" />
-        </svg>
+        <div class="header__content standard__section--size">
+            <!--Instagram account-->
+            <ul class="header__content--socials">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg"  height="44" viewBox="0 0 24 24" stroke-width="2" stroke="url(#instragram__gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M16.5 7.5l0 .01" />
+                        <defs>
+                            <linearGradient id="instragram__gradient">
+                            <stop offset="0%" stop-color="#ffac01"/>
+                            <stop offset="25%" stop-color="#fe450a"/>
+                            <stop offset="60%" stop-color="#fe0090"/>
+                            <stop offset="100%" stop-color="#7b0cfe"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </li>
+                <li><span class="p__strong">@writemewc</span></li>
+            </ul>
+            <!--Side menu icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="header__content--openModal" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4 6l16 0" />
+                <path d="M4 12l16 0" />
+                <path d="M4 18l16 0" />
+            </svg>
+        </div>
+        <!--Pop-up header-->
+        <div class="header__modal">
+            <div class="header__modal__content">
+                <span class="header__modal__content--close">&times;</span>
+                <nav class="header__modal__content--links">
+                    <a href="index.html" class="header__modal__content--links--each" title="Home">Home</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Stories with L">Stories with L</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Stories with G">Stories with G</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Stories with B">Stories with B</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Stories with T">Stories with T</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Silenced stories">Silenced stories</a>
+                    <a href="stories_with_l.html" class="header__modal__content--links--each" title="Contact us">Contact us</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <section class="bannerHome">
-        <div class="bannerHome__title">
-            <h1><span class="white__letter">W</span>rite me <span class="white__letter"></span>W</span>orlds of <span class="white__letter">C</span>olors</h1>
-        </div>
-        <div class="bannerHome__side">
-            <p>Have you ever had a poem dedicated to you?</p>
-            <p>Have you ever been able to read your story on a paper page?</p>
+            <div class="bannerHome__content">
+                <h1><span class="gradient__h1">W</span>rite me <span class="gradient__h1">W</span>orlds of <span class="gradient__h1">C</span>olors</h1>
+            </div>
+            <div class="bannerHome__colorSide"></div>
         </div>
     </section>
 
@@ -52,26 +90,40 @@
                 <div>
                     <span class="text__strong">Juan Arcones</span>
                     <p>Writer and journalist</p>
-                    <p>"Alguien para ti" saga.</p>
+                    <p>"Alguien para ti" saga</p>
                 </div>
             </div>
             <div>
                 <img src="" alt="">
                 <div>
                     <span class="text__strong">Alice Oseman</span>
-                    <p></p>
-                    <p></p>
+                    <p>Writer, screenwriter and illustrator</p>
+                    <p>"Solitaire" and "Heartstopper" saga</p>
                 </div>
             </div>
             <div>
                 <img src="" alt="">
                 <div>
-                    <span class="text__strong">Juan Arcones</span>
-                    <p></p>
-                    <p></p>
+                    <span class="text__strong">Alejandro Albán</span>
+                    <p>Writer and psychiatrist</p>
+                    <p>"Solo los valientes"</p>
                 </div>
             </div>
         </div>
     </section>
+    <section>
+        <h2>Upcoming events</h2>
+        <div></div>
+    </section>
+    <footer>
+        <div>
+            <img src="" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
