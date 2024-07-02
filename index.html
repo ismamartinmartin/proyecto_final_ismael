@@ -29,7 +29,7 @@
                         </defs>
                     </svg>
                 </li>
-                <li><span class="p__strong">@writemewc</span></li>
+                <li><p class="bold">@writemewc</p></li>
             </ul>
             <!--Side menu icon-->
             <svg xmlns="http://www.w3.org/2000/svg" class="header__content--openModal" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -59,71 +59,92 @@
 
     <section class="bannerHome">
             <div class="bannerHome__content">
-                <h1><span class="gradient__h1">W</span>rite me <span class="gradient__h1">W</span>orlds of <span class="gradient__h1">C</span>olors</h1>
+                <h1><span class="gradient">W</span>rite me <span class="gradient">W</span>orlds of <span class="gradient">C</span>olors</h1>
             </div>
-            <div class="bannerHome__colorSide"></div>
+            <div class="bannerHome__colorSide">
+                <h3 class="bannerHome__colorSide--text">Have you been able to read your story on a paper page journey?</h3>
+            </div>
         </div>
     </section>
 
-    <div>
-        <h5><strong>Write me Worlds of Colors</strong> is an initiative with the objective of making LGBTQ+ literature and its authors visible.</h5>
+    <div class="intro standard__section--size">
+        <h5><stan class="bold">Write me Worlds of Colors</stan> is an initiative with the objective of making LGBTQ+ literature and its authors visible.</h5>
         <h5>Because we all deserve to be heard, to feel represented and to be educated in diversity.</h5>
     </div>
 
-    <section>
-        <h3><i>Catalogue</i></h3> 
-        <div>
-            <a title="Stories with L" href="stories_with_l.html"></a>
-            <a title="Stories with G" href="stories_with_l.html"></a>
-            <a title="Stories with B" href="stories_with_l.html"></a>
-            <a title="Stories with T" href="stories_with_l.html"></a>
-            <a title="+ Literature & Diversity" href="stories_with_l.html"></a>
-            <a title="Children's literature" href="stories_with_l.html"></a>
+    <section class="catalogue standard__section--size">
+        <h3 class="catalogue__title"><stan class="italic underline">Catalogue</stan></h3>
+        <div class="catalogue__items">
+            <a title="Stories with L" href="stories_with_l.html" class="button">Stories with L</a>
+            <a title="Stories with G" href="stories_with_l.html" class="button">Stories with G</a>
+            <a title="Stories with B" href="stories_with_l.html" class="button">Stories with B</a>
+            <a title="Stories with T" href="stories_with_l.html" class="button">Stories with T</a>
+            <a title="+ Literature & Diversity" href="stories_with_l.html" class="button">+ Literature & Diversity</a>
+            <a title="Children's literature" href="stories_with_l.html" class="button">Children's literature</a>
         </div>
     </section>
 
-    <section>
-        <h2>Featured authors of the week</h2>
-        <div>
-            <div>
-                <img src="" alt="">
+    <section class="authors">
+        <div class="authors__container standard__section--size">
+            <h2>Featured authors of the week</h2>
+            <div class="authors__container__boxes">
                 <div>
-                    <span class="text__strong">Juan Arcones</span>
-                    <p>Writer and journalist</p>
-                    <p>"Alguien para ti" saga</p>
+                    <picture>
+                        <source type="image/webp" srcset="/media/authors_juan_arcones.webp">
+                        <img src="/media/authors_juan_arcones.jpg" class="authors__container__boxes--img" loading="lazy" alt="Juan Arcones">
+                    </picture>
+                    <div class="authors__container__boxes--text">
+                        <p class="bold">Juan Arcones</p>
+                        <p class="smaller__p">Writer and journalist</p>
+                        <p class="smaller__p"><span class="italic">"Alguien para ti"</span> saga</p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="" alt="">
                 <div>
-                    <span class="text__strong">Alice Oseman</span>
-                    <p>Writer, screenwriter and illustrator</p>
-                    <p>"Solitaire" and "Heartstopper" saga</p>
+                    <picture>
+                        <source type="image/webp" srcset="/media/authors_alice_oseman.webp">
+                        <img src="/media/authors_alice_oseman.jpg" class="authors__container__boxes--img" loading="lazy" alt="Alice Oseman">
+                    </picture>
+                    <div class="authors__container__boxes--text">
+                        <p class="bold">Alice Oseman</p>
+                        <p class="smaller__p">Writer, screenwriter and illustrator</p>
+                        <p class="smaller__p"><span class="italic">"Solitaire"</span> and <span></span class="italic">"Heartstopper"</span> saga</p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <img src="" alt="">
                 <div>
-                    <span class="text__strong">Alejandro Albán</span>
-                    <p>Writer and psychiatrist</p>
-                    <p>"Solo los valientes"</p>
+                    <picture>
+                        <source type="image/webp" srcset="/media/authors_alejandro_alban.webp">
+                        <img src="/media/authors_alejandro_alban.jpg" class="authors__container__boxes--img" loading="lazy" alt="Alejandro Albán">
+                    </picture>
+                    <div class="authors__container__boxes--text">
+                        <p class="bold">Alejandro Albán</p>
+                        <p class="smaller__p">Writer and psychiatrist</p>
+                        <p class="smaller__p italic">"Solo los valientes"</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <h2>Upcoming events</h2>
-        <div></div>
-    </section>
-    <footer>
-        <div>
-            <img src="" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
+<br>
+    <footer class="footer">
+        <section class="footer__container standard__section--size">
+            <div class="footer__container__logo">
+                <h4 class="footer__container__logo--text"><span class="gradient">W</span>rite me <span class="gradient">W</span>orlds of <span class="gradient">C</span>olors</h4>
+                <div class="footer__container__logo--gradient"></div>
+            </div>
+            <nav class="footer__container__links">
+                <a href="index.html" class="footer__container__links--each" title="Home">Home</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with L">Stories with L</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with G">Stories with G</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
+                <a href="stories_with_l.html" class="footer__container__links--each" title="Silenced stories">Silenced stories</a>
+                <div class="footer__container__links--contact">
+                    <a href="stories_with_l.html" title="Contact us">Contact us →</a>
+                    <a href="stories_with_l.html" title="Follow us on Intagram">Follow us on Instagram  →</a>
+                </div>
+            </nav>
+            </section>
     </footer>
 </body>
 </html>
