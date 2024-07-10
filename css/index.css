@@ -20,6 +20,16 @@
     --storiesB-blue: #0038a8;
     --storiesB-pink: #fec0e0;
     --storiesB-gradient: linear-gradient(90deg, rgba(214,2,112,1) 0%, rgba(115,79,150,1) 100%);;
+    --storiesT-blueLight: #d4f6ff;
+    --storiesT-blueDark: #38d1fd;
+    --storiesT-gradient: linear-gradient(90deg, rgba(252,171,186,1) 26%, rgba(56,209,253,1) 100%);
+    --plusLiteratureDiversity-black: #2d2d2d;
+    --plusLiteratureDiversity-purpleLight: #d1b3cc;
+    --plusLiteratureDiversity-purpleDark: #9b59d0;
+    --plusLiteratureDiversity-gradient: linear-gradient(90deg, rgba(155,89,208,1) 15%, rgba(255,244,51,1) 100%);
+    --childrensLiterature-orangeDark: #ff7300;
+    --childrensLiterature-orangeLight: #ffcea6;
+    --childrensLiterature-gradient: linear-gradient(90deg, rgba(255,213,0,1) 24%, rgba(255,115,0,1) 100%);
 }
 
 /*FONTS*/
@@ -433,6 +443,133 @@ a {
     100% {opacity: 1;}
 }
 
+/*BANNER STORIES*/
+.bannerStories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    min-height: 400px;
+}
+
+.bannerStories .bannerStories__content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--standard-padding);
+
+    max-width: 800px;
+    min-height: 250px;
+
+    background-color: var(--color-white);
+    border-radius: 15px;
+}
+
+/*BANNER STORIES --> Stories with L*/
+.storiesL__background {
+    background: url('/media/banner_stories_L.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesL__letterColor {
+    color: var(--storiesL-purple);
+}
+
+/*BANNER STORIES --> Stories with G*/
+.storiesG__background {
+    background: url('/media/banner_stories_G.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesG__letterColor {
+    color: var(--storiesG-darkBlue);
+}
+
+/*BANNER STORIES --> Stories with B*/
+.storiesB__background {
+    background: url('/media/banner_stories_B.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesB__letterColor {
+    color: var(--storiesB-blue);
+}
+
+/*BANNER STORIES --> Stories with T*/
+.storiesT__background {
+    background: url('/media/banner_stories_T.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesT__letterColor {
+    color: var(--storiesT-blueDark);
+}
+
+/*BANNER STORIES --> +Literature & Diversity*/
+.storiesPlus__background {
+    background: url('/media/banner_plus_literautre_diversity.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesPlus__letterColor {
+    color: var(--plusLiteratureDiversity-purpleDark);
+}
+
+/*BANNER STORIES --> Children's Literature*/
+.childrensLiterature__background {
+    background: url('/media/banner_childrens_literature.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*BANNER CONTACT*/
+.bannerContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    min-height: 300px;
+
+    background-image: url('/media/logo_gradient_color.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerContact .bannerContact__content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--standard-padding);
+
+    max-width: 800px;
+    min-height: 150px;
+
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 15px;
+}
+
 /*INTRO HOME*/
 .intro {
     display: flex;
@@ -598,12 +735,12 @@ a {
     color: var(--color-white);
 }
 
-.carrousel__slider__container__each--img {
+.carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--img {
     width: 290px;
     height: auto;
 }
 
-.carrousel__slider__container__each--text {
+.carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -615,93 +752,7 @@ a {
     width: 710px;
 }
 
-.carrousel__container__content__slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-
-    transition: 2s ease-in-out;
-
-    max-width: var(--standard-max-width);
-    max-height: 400px;
-}
-
-.carrousel__container__content__slider--each {
-    width: var(--standard-max-width);
-    object-fit: cover;
-}
-
-.carrousel__img {
-    width: 200px;
-    height: auto;
-}
-
-/*BANNER STORIES*/
-.bannerStories {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100vw;
-    min-height: 400px;
-}
-
-.bannerStories .bannerStories__content {
-    flex-grow: var(--standard-flex-grow);
-    flex-basis: var(--standard-flex-basis);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: var(--standard-padding);
-
-    max-width: 800px;
-    min-height: 250px;
-
-    background-color: var(--color-white);
-    border-radius: 15px;
-}
-
-/*BANNER STORIES --> Stories with L*/
-.storiesL__background {
-    background: url('/media/banner_stories_L.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.storiesL__letterColor {
-    color: var(--storiesL-purple);
-}
-
-/*BANNER STORIES --> Stories with G*/
-.storiesG__background {
-    background: url('/media/banner_stories_G.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.storiesG__letterColor {
-    color: var(--storiesG-darkBlue);
-}
-
-/*BANNER STORIES --> Stories with B*/
-.storiesB__background {
-    background: url('/media/banner_stories_B.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.storiesB__letterColor {
-    color: var(--storiesB-blue);
-}
-
-/*CARDS*/
+/*CARDS STORIES L, G, B & T / +Literature & Diversity / Children's Literature*/
 .cards {
     display: flex;
     flex-direction: column;
@@ -910,6 +961,95 @@ a {
 
 .storiesB__text__background {
     background-color: var(--storiesB-pink);
+}
+
+/*CARDS --> Stories with T*/
+.storiesT__img__background {
+    background-color: var(--storiesT-blueDark);
+}
+
+.storiesT__information__background {
+    background-image: var(--storiesT-gradient);
+}
+
+.storiesT__information__text--background {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.storiesT__text__background {
+    background-color: var(--storiesT-blueLight);
+}
+
+/*CARDS --> +Literature & Diversity*/
+.storiesPlus__img__background {
+    background-color: var(--plusLiteratureDiversity-black);
+}
+
+.storiesPlus__information__background {
+    background-image: var(--plusLiteratureDiversity-gradient);
+}
+
+.storiesPlus__information__text--background {
+    background-color: var(--plusLiteratureDiversity-black);
+    color: var(--color-white);
+}
+
+.storiesPlus__text__background {
+    background-color: var(--plusLiteratureDiversity-purpleLight);
+}
+
+/*CARDS --> Children's literature*/
+.childrensLiterature__img__background {
+    background-color: var(--childrensLiterature-orangeDark);
+}
+
+.childrensLiterature__information__background {
+    background-image: var(--childrensLiterature-gradient);
+}
+
+.childrensLiterature__information__text--background {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.childrensLiterature__text__background {
+    background-color: var(--childrensLiterature-orangeLight);
+}
+
+/*FORM*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 500px;
+}
+
+.form .form__content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--standard-gap);
+
+    min-height: 500px;
+}
+
+.form__content__section {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--standard-gap);
 }
 
 
