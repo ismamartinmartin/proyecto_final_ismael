@@ -14,6 +14,12 @@
     --storiesL-orange: #fbc2a4;
     --storiesL-purple: #a91178;
     --storiesL-gradient: linear-gradient(90deg, rgba(244,114,52,1) 0%, rgba(214,84,178,1) 100%);
+    --storiesG-lightBlue: #99e8c2;
+    --storiesG-darkBlue: #3e1a78;
+    --storiesG-gradient: linear-gradient(90deg, rgba(38,206,170,1) 0%, rgba(80,73,203,1) 100%);
+    --storiesB-blue: #0038a8;
+    --storiesB-pink: #fec0e0;
+    --storiesB-gradient: linear-gradient(90deg, rgba(214,2,112,1) 0%, rgba(115,79,150,1) 100%);;
 }
 
 /*FONTS*/
@@ -659,8 +665,9 @@ a {
     border-radius: 15px;
 }
 
+/*BANNER STORIES --> Stories with L*/
 .storiesL__background {
-    background: url('/media/banner_storiesL.gif');
+    background: url('/media/banner_stories_L.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -668,6 +675,30 @@ a {
 
 .storiesL__letterColor {
     color: var(--storiesL-purple);
+}
+
+/*BANNER STORIES --> Stories with G*/
+.storiesG__background {
+    background: url('/media/banner_stories_G.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesG__letterColor {
+    color: var(--storiesG-darkBlue);
+}
+
+/*BANNER STORIES --> Stories with B*/
+.storiesB__background {
+    background: url('/media/banner_stories_B.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.storiesB__letterColor {
+    color: var(--storiesB-blue);
 }
 
 /*CARDS*/
@@ -844,6 +875,43 @@ a {
 .storiesL__text__background {
     background-color: var(--storiesL-orange);
 }
+
+/*CARDS --> Stories with G*/
+.storiesG__img__background {
+    background-color: var(--storiesG-darkBlue);
+}
+
+.storiesG__information__background {
+    background-image: var(--storiesG-gradient);
+}
+
+.storiesG__information__text--background {
+    background-color: var(--storiesG-darkBlue);
+    color: var(--color-white);
+}
+
+.storiesG__text__background {
+    background-color: var(--storiesG-lightBlue);
+}
+
+/*CARDS --> Stories with B*/
+.storiesB__img__background {
+    background-color: var(--storiesB-blue);
+}
+
+.storiesB__information__background {
+    background-image: var(--storiesB-gradient);
+}
+
+.storiesB__information__text--background {
+    background-color: var(--storiesB-blue);
+    color: var(--color-white);
+}
+
+.storiesB__text__background {
+    background-color: var(--storiesB-pink);
+}
+
 
 
 
