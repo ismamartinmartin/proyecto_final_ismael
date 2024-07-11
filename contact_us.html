@@ -62,29 +62,31 @@
         <!--Title-->   
         <div class="bannerContact__content">
             <h1>Contact us</h1>
+            <p class="smaller__p">If you would like to contribute to our purpose, as well as undertake new projects and collaborations to increase LGBTQ+ representation in literature, we would like to leave the following contact form at your disposal We would be delighted to receive your proposal!</p>
         </div>
     </section>
 
-    <!--FORM-->
-    <section class="form standard__section--size">
-    <form class="form__content" method="post" action="#">
-        <div class="form__content__section">
-            <input type="text" class="form__content__section--input" id="name" placeholder="Nombre" required>
-            <input type="text" class="form__content__section--input" id="surname" placeholder="Apellidos" required>
-            <input type="email" class="form__content__section--input" id="email" placeholder="Email">
+    <form class="form standard__section--size" method="post" action="#">
+        <div class="form__section">
+            <div class="form__section__container">
+                <label class="form__section__container--label" for="name">Full name / Company name *</label>
+                <input type="text" name="Nombre / Razón social" placeholder="Nombre" required>
+            </div>
+            <div class="form__section__container">
+                <label class="form__section__container--label" for="email">Email *</label>
+                <input type="email" name="Email" placeholder="Email" required>
+            </div>
         </div>
-        <div class="form__content__section">
-            <input type="text" class="form__content__section--input" id="
-            description" placeholder="Write a message" required>
+        <div class="form__section">
+            <div class="form__section__container">
+                <label class="form__section__container--label" for="description">Message *</label>
+                <input type="text" class="form__section__container--description" name="Write a message" placeholder="Write a message" required>
+            </div>
         </div>
-        <span class="form__content__section">
-            <p class="form__content__section--privacyPolicy"><input type="checkbox" name="Privacidad" id="Privacidad" class="form__content__section--input" id="privacy">Acepto la política de privacidad</p>
-        </span>
-        <div class="form__content__section">
-            <input type="submit" class="form__content__section--input" id="button" value="Continuar">
+        <div class="form__section__button">
+            <input type="submit" class="form__section__button--style" id="button" value="Send">
         </div>
     </form>
-    </section>
 
     <!--FOOTER-->
     <footer class="footer">
