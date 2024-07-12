@@ -7,30 +7,23 @@ let slider = document.querySelectorAll(".carrousel__slider__container__each")
 let section = document.querySelector(".carrousel__slider__container")
 let contador = 0
 
-//MENU
-openModal.addEventListener('click', () => {
-    modal.style.display = "block";
-    modal.addEventListener('click', () => {
-        modal.style.display = "none";
-    })
-    cross.addEventListener('click', () => {
-        modal.style.display = "none";  
-    })
-})
 
 //SLIDER HOME WIDTH > 1000px
-setInterval(() =>{
-    if (contador < slider.length - 1){
-        contador++
-        let calcule = (contador * (-1000))
-        section.style.transform = (`translateX(${calcule}px)`)
+function updateSlideWidth() {
+    let slideWidth = document.querySelector('.carrousel__slider__container__each').offsetWidth;
+    section.style.transform = `translateX(${-contador * slideWidth}px)`;
+}
+
+window.addEventListener('resize', updateSlideWidth);
+
+setInterval(() => {
+    if (contador < slider.length - 1) {
+        contador++;
+    } else {
+        contador = 0;
     }
-    else if (contador == slider.length - 1){
-        contador = 0
-        let calcule = (contador * (-1000))
-        section.style.transform = (`translateX(${calcule}px)`)  
-    }
-},5000)
+    updateSlideWidth();
+}, 5000);
 
 //SEARCH ENGINE
 function search() {
@@ -70,3 +63,14 @@ function search() {
         noResultDiv.style.display = "flex";
     }
 }
+
+//MENU
+openModal.addEventListener('click', () => {
+    modal.style.display = "block";
+    modal.addEventListener('click', () => {
+        modal.style.display = "none";
+    })
+    cross.addEventListener('click', () => {
+        modal.style.display = "none";  
+    })
+})

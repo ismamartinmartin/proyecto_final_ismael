@@ -4,10 +4,10 @@
     --standard-padding: 2em;
     --standard-gap: 1em;
     --standard-max-width: 1000px;
-    --standard-min-height: 800px;
     --standard-min-height: 500px;
     --standard-flex-basis: 0;
     --standard-flex-grow: 1;
+    --standard-border-radius: 5px;
     --color-black: #000000;
     --color-white: #ffffff;
     --gradient-one: linear-gradient(163deg, rgba(240,223,118,1) 0%, rgba(171,63,24,1) 46%, rgba(109,2,17,1) 54%, rgba(60,4,43,1) 59%, rgba(0,4,101,1) 67%, rgba(42,110,123,1) 83%, rgba(80,208,144,1) 100%);
@@ -60,7 +60,6 @@ li {
 }
 
 /*TIPOGRAPHY*/
-
 h1 {
     font-family: "krub_bold";
     font-size: 60px;
@@ -136,6 +135,8 @@ a {
     border: 1px var(--color-black) solid;
     color: var(--color-white);
 
+    border-radius: 5px;
+
     width: 300px;
 }
 
@@ -179,10 +180,24 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: var(--standard-gap);
+}
+
+.header .header__content .header__content--socials--content {
+    flex-grow: var(--standard-flex-grow);
+    flex-basis: var(--standard-flex-basis);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: .5em;
 }
 
 .header .header__content .header__content--openModal {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
     cursor: pointer;
 }
 
@@ -196,13 +211,14 @@ a {
     width: 100vw;
     height: 100vh;
 
-    animation: opacityEffect .5s ease-in-out;
+    animation: opacityEffect .5s ease;
+    z-index: 10;
 }
 
 .header .header__modal .header__modal__content {
     position: fixed;
     top: 0;
-    left: 75%;
+    left: 70vw;
 
     display: flex;
     flex-direction: column;
@@ -218,7 +234,7 @@ a {
     background-color: var(--color-black);
     color: var(--color-white);
 
-    animation: sideEffectMenu 2s ease-in-out;
+    animation: sideEffectMenu 2s ease;
 }
 
 .header .header__modal .header__modal__content .header__modal__content--close {
@@ -228,7 +244,7 @@ a {
 
     cursor: pointer;
 
-    animation: opacityEffect 3s ease-in-out;
+    animation: opacityEffect 3s ease;
 }
 
 .header .header__modal .header__modal__content .header__modal__content--links {
@@ -241,7 +257,7 @@ a {
     align-items: start;
     gap: var(--standard-gap);
     padding: 0 2em;
-    animation: opacityEffect 3s ease-in-out;
+    animation: opacityEffect 3s ease;
 }
 
 .header .header__modal .header__modal__content .header__modal__content--links--each {
@@ -371,7 +387,7 @@ a {
 /*BANNER HOME*/
 .bannerHome {
     width: 100vw;
-    height: var(--standard-min-height);
+    height: 500px;
 
     display: flex;
     flex-direction: row;
@@ -390,9 +406,9 @@ a {
     justify-content: end;
     align-items: center;
 
-    height: var(--standard-min-height);
+    height: 500px;
     width: 60vw;
-    padding-right: 4em;
+    padding-right: 3em;
 
     color: white;
 
@@ -402,6 +418,10 @@ a {
 
 .bannerHome .bannerHome__content .bannerHome__content--text {
     width: 500px;
+}
+
+.bannerHome .bannerHome__content .bannerHome__content--gradient {
+    display: none;
 }
 
 .bannerHome .bannerHome__colorSide {
@@ -419,7 +439,7 @@ a {
     text-align: center;
     color: var(--color-white);
 
-    height: var(--standard-min-height);
+    height: 500px;
     width: 40vw;
 
     animation: sideColor 10s ease-in-out;
@@ -438,9 +458,9 @@ a {
 }
 
 @keyframes textContent {
-    0% {opacity: 0; padding-left: 0; padding-right: 0;}
-    25% {opacity: 0; padding-left: 0; padding-right: 0;}
-    60% {opacity: 0; padding-left: 10em; padding-right: 1em;}
+    0% {opacity: 0; padding-right: 0;}
+    25% {opacity: 0; padding-right: 0;}
+    60% {opacity: 0; padding-right: 3em;}
     100% {opacity: 1;}
 }
 
@@ -610,6 +630,7 @@ a {
     justify-content: center;
     align-items: center;
 
+    border-radius: 5px;
     gap: var(--standard-gap);
 }
 
@@ -674,12 +695,9 @@ a {
     justify-content: center;
     align-items: center;
     gap: 2em;
-
     padding: var(--standard-padding);
-
-    width: 100vw;
+    width: 100vw; /* Ancho completo de la ventana */
     min-height: 400px;
-    
     background: url('/media/background_support_gradient.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -691,11 +709,10 @@ a {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-
     text-align: start;
-
-    width: var(--standard-max-width);
-    min-height: 50px;
+    width: 100%;
+    max-width: 1000px; /* Máximo ancho del título */
+    min-height: 50px; /* Altura mínima del título */
 }
 
 .carrousel .carrousel__slider {
@@ -704,8 +721,9 @@ a {
     align-items: center;
     overflow: hidden;
     gap: 1em;
-
-    min-height: 290px;
+    width: 100%;
+    max-width: 1000px; /* Máximo ancho del slider */
+    min-height: 50px; /* Altura mínima del slider */
 }
 
 .carrousel .carrousel__slider .carrousel__slider__container {
@@ -714,11 +732,9 @@ a {
     justify-content: start;
     align-items: center;
     flex-wrap: nowrap;
-
-    transition: 2s ease-in-out;
-
-    max-width: var(--standard-max-width);
-    max-height: 300px;
+    transition: transform 1.5s ease; /* Reducido a 0.7s y ease para una transición más suave */
+    width: 100%;
+    max-height: 300px; /* Altura máxima del contenedor del slider */
 }
 
 .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each {
@@ -727,19 +743,15 @@ a {
     justify-content: center;
     align-items: center;
     gap: var(--standard-gap);
-
     margin: var(--standard-margin);
-
-    width: var(--standard-max-width);
-
+    flex: 0 0 auto;
     object-fit: cover;
-
     background-color: var(--color-black);
     color: var(--color-white);
 }
 
 .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--img {
-    width: 290px;
+    width: calc(25vw - var(--standard-gap)); /* Ancho relativo al viewport */
     height: auto;
 }
 
@@ -750,9 +762,14 @@ a {
     align-items: start;
     gap: var(--standard-gap);
 
-    padding: var(--standard-padding);
+    padding-right: var(--standard-padding);
+    width: calc(70vw - var(--standard-gap)); /* Ancho relativo al viewport */
+    max-width: 100%; /* Nuevo ajuste para que no se desborde */
+}
 
-    width: 710px;
+.carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text h4,
+.carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text p {
+    width: 70%;
 }
 
 /*CARDS STORIES L, G, B & T / +Literature & Diversity / Children's Literature*/
@@ -1113,10 +1130,150 @@ a {
 }
 
 
+/*MEDIA MAX-WIDTH 1000px*/
+@media (max-width: 1000px) {
+    /*Root*/
+    :root {
+        --standard-max-width: 80vw;
+    }
 
+    /*TIPOGRAPHY*/
+    h1 {
+        font-size: 50px;
+    }
 
+    /*Header*/
+    .header .header__modal .header__modal__content {
+        left: 10vw;
+        right: 10vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: .5em;
+    
+        width: 80vw;
+        height: 80vh;
+    
+        padding: var(--standard-padding);
+    }
+    
+    .header .header__modal .header__modal__content .header__modal__content--links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+        padding: 0 4em;
 
+        width: 100%;
+    }
 
+    .header .header__modal .header__modal__content .header__modal__content--links--each {
+        color: var(--color-white);
+        align-self: center;
+    }
 
+    /*Banner home*/
+    .bannerHome {
+        height: 350px;
+    }
+    
+    .bannerHome .bannerHome__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--standard-gap);
 
+        height: 350px;
+        width: 100%;
+
+        padding-right: 0;
+
+        animation: textContent 0s;
+        animation: opacityEffect 3s ease-in-out;
+    }
+    
+    .bannerHome .bannerHome__content .bannerHome__content--gradient {
+        display: block;
+        height: 150px;
+        width: 150px;
+
+        border-radius: 100%;
+
+        background-image: url('/media/logo_gradient_color.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .bannerHome .bannerHome__colorSide {
+        display: none;
+    }
+}
+
+/*MEDIA MAX-WIDTH 768px*/
+@media (max-width: 768px) {
+    /*Tipography*/
+    h1 {
+        font-size: 40px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    /*Buttons*/
+    .button {
+        width: 150px;
+    }
+
+    /*Header*/
+    .header div.standard__section--size {
+        max-width: none;
+        padding: 1em 3em;
+    }
+
+    .bannerHome .bannerHome__content .bannerHome__content--text {
+        width: 200px;
+    }
+
+    /*Banner home*/
+    .bannerHome .bannerHome__content .bannerHome__content--gradient {
+        height: 100px;
+        width: 100px;
+    }
+
+    .carrousel .carrousel__slider {
+        max-width: 768px; /* Ajuste máximo para dispositivos más pequeños */
+    }
+    .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--img {
+        width: 80vw; /* Ajuste del ancho de la imagen para dispositivos más pequeños */
+    }
+    .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text {
+        width: calc(80vw - var(--standard-gap)); /* Ajuste del ancho del texto para dispositivos más pequeños */
+    }
+}
+
+/*MEDIA MAX-WIDTH 480px*/
+@media (max-width: 480px) {
+    .carrousel .carrousel__slider {
+        max-width: 480px; /* Ajuste máximo para dispositivos aún más pequeños */
+    }
+    .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--img {
+        width: 90vw; /* Ajuste del ancho de la imagen para dispositivos aún más pequeños */
+    }
+    .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text {
+        width: calc(90vw - var(--standard-gap)); /* Ajuste del ancho del texto para dispositivos aún más pequeños */
+    }
+}
