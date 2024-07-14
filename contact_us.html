@@ -12,8 +12,9 @@
     <header class="header">
         <div class="header__content standard__section--size">
             <!--Instagram account-->
-            <ul class="header__content--socials">
+            <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors" target="_blank" class="header__content--socials"><ul class="header__content--socials--content">
                 <li>
+                    
                     <svg xmlns="http://www.w3.org/2000/svg"  height="44" viewBox="0 0 24 24" stroke-width="2" stroke="url(#instragram__gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
@@ -29,8 +30,8 @@
                         </defs>
                     </svg>
                 </li>
-                <li><p class="bold">@writemewc</p></li>
-            </ul>
+                <li><h6 class="bold">@writemewc</h6></li>
+            </ul></a>
             <!--Side menu icon-->
             <svg xmlns="http://www.w3.org/2000/svg" class="header__content--openModal" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -47,42 +48,47 @@
                     <a href="index.html" class="header__modal__content--links--each" title="Home">Home</a>
                     <a href="stories_with_l.html" class="header__modal__content--links--each" title="Stories with L">Stories with L</a>
                     <a href="stories_with_g.html" class="header__modal__content--links--each" title="Stories with G">Stories with G</a>
-                    <a href="stories_with_t.html" class="header__modal__content--links--each" title="Stories with B">Stories with B</a>
-                    <a href="stories_with_b.html" class="header__modal__content--links--each" title="Stories with T">Stories with T</a>
+                    <a href="stories_with_t.html" class="header__modal__content--links--each" title="Stories with T">Stories with T</a>
+                    <a href="stories_with_b.html" class="header__modal__content--links--each" title="Stories with B">Stories with B</a>
                     <a href="plus_literature_diversity.html" class="header__modal__content--links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
-                    <a href="childrens_literature.html" class="header__modal__content--links--each" title="Children's Literature">Silenced stories</a>
+                    <a href="childrens_literature.html" class="header__modal__content--links--each" title="Children's Literature">Children's literature</a>
                     <a href="contact_us.html" class="header__modal__content--links--each" title="Contact us">Contact us</a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!--BANNER STORIES-->
+    <!--BANNER CONTACT-->
     <section class="bannerContact">
-        <!--Title-->   
         <div class="bannerContact__content">
+            <!--Title-->   
             <h1>Contact us</h1>
+            <!--Message-->
             <p class="smaller__p">If you would like to contribute to our purpose, as well as undertake new projects and collaborations to increase LGBTQ+ representation in literature, we would like to leave the following contact form at your disposal We would be delighted to receive your proposal!</p>
         </div>
     </section>
 
-    <form class="form standard__section--size" method="post" action="#">
+    <!--FORM-->
+    <form class="form standard__section--size" method="post" action="">
+        <!--Full name / Company name & Email-->
         <div class="form__section">
             <div class="form__section__container">
-                <label class="form__section__container--label" for="name">Full name / Company name *</label>
-                <input type="text" name="Nombre / Razón social" placeholder="Nombre" required>
+                <label class="form__section__container--label" for="full-name">Full name / Company name *</label>
+                <input id="full-name" type="text" name="Full name / Company name" placeholder="Nombre" required>
             </div>
             <div class="form__section__container">
                 <label class="form__section__container--label" for="email">Email *</label>
-                <input type="email" name="Email" placeholder="Email" required>
+                <input id="email" type="email" name="Email" placeholder="Email" required>
             </div>
         </div>
+        <!--Message-->
         <div class="form__section">
             <div class="form__section__container">
                 <label class="form__section__container--label" for="description">Message *</label>
-                <input type="text" class="form__section__container--description" name="Write a message" placeholder="Write a message" required>
+                <input id="description" type="text" class="form__section__container--description" name="Description" placeholder="Write a message" required>
             </div>
         </div>
+        <!--Button-->
         <div class="form__section__button">
             <input type="submit" class="form__section__button--style" id="button" value="Send">
         </div>
@@ -99,7 +105,7 @@
                 <a href="stories_with_t.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
                 <a href="stories_with_b.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
                 <a href="plus_literature_diversity.html" class="footer__container__links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
-                <a href="childrens_literature.html" class="footer__container__links--each" title="Children's Literature">Silenced stories</a>
+                <a href="childrens_literature.html" class="footer__container__links--each" title="Children's Literature">Children's literature</a>
             </nav>
                 <div class="footer__container__content">
                 <!--Logo-->
