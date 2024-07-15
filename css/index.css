@@ -1591,6 +1591,11 @@ Estructura:
         font-size: 18px;
     }
 
+    /*Header*/
+    .header .header__modal .header__modal__content {
+        height: 100vh;
+    }
+
     /*Buttons*/
     .button {
         width: 150px;
@@ -1735,6 +1740,41 @@ Estructura:
 
 /*--- MEDIA MAX-WIDTH 480px ---*/
 @media (max-width: 480px) {
+    /*Tipography*/
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    h5 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 13px;
+    }
+    
+    p {
+        font-size: 11px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /*Footer*/
+    .footer .footer__container .footer__container__content  .footer__container__content__logo .footer__container__content__logo--gradient {
+        width: 60px;
+        height: 60px;
+    }
+
     /*Buttons*/
     .button {
         width: 125px;
