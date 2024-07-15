@@ -1,3 +1,12 @@
+<!--En esta página encontramos los libros de literatura infantil. Tiene la siguiente estructura:
+-Header
+-Banner stories
+-Footer
+-Buscador
+-Cards con los libros de la temática
+-Footer
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +18,11 @@
 </head>
 <body>
     <!--HEADER-->
+    <!--Incorpora tanto la parte del header bruto como el pop-up del menu hamburguesa-->
     <header class="header">
         <div class="header__content standard__section--size">
             <!--Instagram account-->
-            <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors" target="_blank" class="header__content--socials"><ul class="header__content--socials--content">
+            <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors Instagram" target="_blank" rel="noreferrer" class="header__content--socials"><ul class="header__content--socials--content">
                 <li>
                     
                     <svg xmlns="http://www.w3.org/2000/svg"  height="44" viewBox="0 0 24 24" stroke-width="2" stroke="url(#instragram__gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -59,6 +69,7 @@
     </header>
 
     <!--BANNER STORIES-->
+    <!--Este es el banner de la página con el título y un fondo degradado adaptado a la estética de la página-->
     <section class="bannerStories childrensLiterature__background">
         <!--Title-->   
         <div class="bannerStories__content">
@@ -67,6 +78,7 @@
     </section>
 
     <!--CARDS-->
+    <!--Incorpora el buscador, que busca el contenido según el título del libro, y las cards correspondientes de la categoría-->
     <section class="cards standard__section--size">
         <!--Search engine-->
         <div class="cards__search">
@@ -74,8 +86,11 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                 <path d="M21 21l-6 -6" />
-              </svg>
-            <input type="text" class="cards__search--input" id="inputSearch" onkeyup="search()" placeholder="Search by book title">
+            </svg>
+            <form method="post" action="#" class="cards__search_form">
+                <label for="inputSearch" style="display:none;">Search</label>
+                <input type="text" class="cards__search_form--input" id="inputSearch" name="inputSearch" onkeyup="search()" placeholder="Search by book title">
+            </form>
         </div>
         <!--Cards section-->
         <div class="cards__container" id="sectionSearch">
@@ -196,6 +211,7 @@
     </section>
 
     <!--FOOTER-->
+    <!--El footer tiene dos secciones principales, una con el índice de las páginas de la web y otra con el logo y dos links, uno a la página de contacto y a la cuenta de Instagram, a los que se quiere dar más protagonismo-->
     <footer class="footer">
         <!--Index-->
         <section class="footer__container">
@@ -203,8 +219,8 @@
                 <a href="index.html" class="footer__container__links--each" title="Home">Home</a>
                 <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with L">Stories with L</a>
                 <a href="stories_with_g.html" class="footer__container__links--each" title="Stories with G">Stories with G</a>
-                <a href="stories_with_t.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
-                <a href="stories_with_b.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
+                <a href="stories_with_t.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
+                <a href="stories_with_b.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
                 <a href="plus_literature_diversity.html" class="footer__container__links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
                 <a href="childrens_literature.html" class="footer__container__links--each" title="Children's Literature">Children's literature</a>
             </nav>
@@ -216,8 +232,8 @@
                 </div>
                 <!--Contact section-->
                 <div class="footer__container__content__contact">
-                    <a href="stories_with_l.html" title="Contact us" class="footer__container__content__contact--text underline">Contact us→</a>
-                    <a href="stories_with_l.html" title="Follow us on Intagram" class="footer__container__content__contact--text underline">Follow us on Instagram→</a>
+                    <a href="contact_us.html" title="Contact us" class="footer__container__content__contact--text underline">Contact us→</a>
+                    <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors Instagram" target="_blank" rel="noreferrer" class="footer__container__content__contact--text underline">Follow us on Instagram→</a>
                 </div>
             </div>
         </section>

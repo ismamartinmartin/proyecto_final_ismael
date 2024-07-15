@@ -1,3 +1,12 @@
+<!--Esta es la página de inicio de la web donde se dan visibilidad algunos autores y eventos destacados y se incluye el catálogo. Tiene la siguiente estructura
+-Header
+-Banner home
+-Introducción 
+-Autores destacados
+-Próximos eventos
+-Footer
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +18,11 @@
 </head>
 <body>
     <!--HEADER-->
+    <!--Incorpora tanto la parte del header bruto como el pop-up del menu hamburguesa-->
     <header class="header">
         <div class="header__content standard__section--size">
             <!--Instagram account-->
-            <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors" target="_blank" class="header__content--socials"><ul class="header__content--socials--content">
+            <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors Instagram" target="_blank" rel="noreferrer" class="header__content--socials"><ul class="header__content--socials--content">
                 <li>
                     
                     <svg xmlns="http://www.w3.org/2000/svg"  height="44" viewBox="0 0 24 24" stroke-width="2" stroke="url(#instragram__gradient)" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -59,6 +69,7 @@
     </header>
 
     <!--BANNER HOME-->
+    <!--Con dos contenedores principales, uno con el título y otro con la animación lateral-->
     <section class="bannerHome">
             <!--Title-->   
             <div class="bannerHome__content">
@@ -69,20 +80,21 @@
             <div class="bannerHome__colorSide">
                 <h3 class="bannerHome__colorSide--text">Have you been able to read your story on a paper page journey?</h3>
             </div>
-        </div>
     </section>
 
     <!--INTRODUCTION-->
+    <!--Incorpora una breve descripción del proyecto-->
     <div class="intro standard__section--size">
         <!--Description-->  
-        <h5><stan class="bold">Write me Worlds of Colors</stan> is an initiative with the objective of making LGBTQ+ literature and its authors visible.</h5>
+        <h5><span class="bold">Write me Worlds of Colors</span> is an initiative with the objective of making LGBTQ+ literature and its authors visible.</h5>
         <h5>Because we all deserve to be heard, to feel represented and to be educated in diversity.</h5>
     </div>
 
     <!--CATALOGUE-->
+    <!--Incorpora el catálogo con las temáticas de la web-->
     <section class="catalogue standard__section--size">
         <!--Title-->
-        <h3 class="catalogue__title"><stan class="italic underline">Catalogue</stan></h3>
+        <h3 class="catalogue__title"><span class="italic underline">Catalogue</span></h3>
         <!--Buttons--> 
         <div class="catalogue__items">
             <a title="Stories with L" href="stories_with_l.html" class="button">Stories with L</a>
@@ -95,6 +107,7 @@
     </section>
 
     <!--AUTHORS SECTION-->
+    <!--Incorpora los autores destacados seleccionados-->
     <section class="authors">
         <!--Title-->
         <div class="authors__title">
@@ -142,6 +155,7 @@
     </section>
 
     <!--CARROUSEL HOME-->
+    <!--Incorpora el carrousel con los eventos destacados seleccionados-->
     <section class="carrousel">
        <!--Title--> 
         <div class="carrousel__title">
@@ -191,6 +205,7 @@
     </section>
     
     <!--FOOTER-->
+    <!--El footer tiene dos secciones principales, una con el índice de las páginas de la web y otra con el logo y dos links, uno a la página de contacto y a la cuenta de Instagram, a los que se quiere dar más protagonismo-->
     <footer class="footer">
         <!--Index-->
         <section class="footer__container">
@@ -198,8 +213,8 @@
                 <a href="index.html" class="footer__container__links--each" title="Home">Home</a>
                 <a href="stories_with_l.html" class="footer__container__links--each" title="Stories with L">Stories with L</a>
                 <a href="stories_with_g.html" class="footer__container__links--each" title="Stories with G">Stories with G</a>
-                <a href="stories_with_t.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
-                <a href="stories_with_b.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
+                <a href="stories_with_t.html" class="footer__container__links--each" title="Stories with T">Stories with T</a>
+                <a href="stories_with_b.html" class="footer__container__links--each" title="Stories with B">Stories with B</a>
                 <a href="plus_literature_diversity.html" class="footer__container__links--each" title="+ Literature & Diversity">+ Literature & Diversity</a>
                 <a href="childrens_literature.html" class="footer__container__links--each" title="Children's Literature">Children's literature</a>
             </nav>
@@ -211,8 +226,8 @@
                 </div>
                 <!--Contact section-->
                 <div class="footer__container__content__contact">
-                    <a href="stories_with_l.html" title="Contact us" class="footer__container__content__contact--text underline">Contact us→</a>
-                    <a href="stories_with_l.html" title="Follow us on Intagram" class="footer__container__content__contact--text underline">Follow us on Instagram→</a>
+                    <a href="contact_us.html" title="Contact us" class="footer__container__content__contact--text underline">Contact us→</a>
+                    <a href="https://www.instagram.com/writememc" title="Write me Worlds of Colors Instagram" target="_blank" rel="noreferrer" class="footer__container__content__contact--text underline">Follow us on Instagram→</a>
                 </div>
             </div>
         </section>
