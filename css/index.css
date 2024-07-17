@@ -22,7 +22,7 @@
     -Max-width 768px: breakpoint tablet.
     -Max-witdh 480px: breakpoint móvil grande.
     -Max-width 320px: breakpoint móvil petite.
-    -Max-height 520px + max-width 1000px: para adaptar el pop-up del header a pantallas horizontales con muy poca altura, es decir, móviles que el usuario gira la pantalla para visualizar el contenido.
+    -Max-height 400px + max-width 1000px: para adaptar el pop-up del header a pantallas horizontales con muy poca altura, es decir, móviles que el usuario gira la pantalla para visualizar el contenido.
     Nota: en el media se sige el mismo orden que en la estructura del css para organizar los elementos
 */
 
@@ -213,7 +213,7 @@ a {
 }
 
 /*Utilizado para que cuando se haga hover en el botón cambie de color*/
-.button:hover {
+.button:hover, .button:active {
     background-color: var(--color-white);
     color: var(--color-black);
 }
@@ -287,6 +287,10 @@ Estructura:
     cursor: pointer;
 }
 
+.header__content--openModal:hover, .header__content--openModal:active {
+    stroke: var(--color-grey);
+}
+
 .header .header__modal {
     display: none;
     position: fixed;
@@ -333,7 +337,7 @@ Estructura:
     animation: opacityEffect 3s ease;
 }
 
-.header .header__modal .header__modal__content .header__modal__content--close:hover {
+.header__modal__content--close:hover, .header__modal__content--close:active {
     color: var(--color-grey);
 }
 
@@ -356,7 +360,7 @@ Estructura:
     color: var(--color-white);
 }
 
-.header .header__modal .header__modal__content .header__modal__content--links--each:hover {
+.header__modal__content--links--each:hover, .header__modal__content--links--each:active{
     color: var(--color-grey);
 }
 
@@ -428,7 +432,7 @@ Estructura:
     color: var(--color-white);
 }
 
-.footer .footer__container .footer__container__links .footer__container__links--each:hover {
+.footer__container__links--each:hover, .footer__container__links--each:active {
     color: var(--color-grey);
 }
 
@@ -494,7 +498,7 @@ Estructura:
     align-items: start;
 }
 
-.footer .footer__container .footer__container__content .footer__container__content__contact .footer__container__content__contact--text:hover {
+.footer__container__content__contact--text:hover, .footer__container__content__contact--text:active  {
     color: var(--color-grey);
 }
 /*--- FOOTER ---*/
@@ -1322,7 +1326,7 @@ Estructura:
     cursor: pointer;
 }
 
-.form .form__section__button.form__section__button--style:hover {
+.form .form__section__button.form__section__button--style:hover, .form .form__section__button.form__section__button--style:active {
     background-color: white;
     color: var(--color-black); 
 
@@ -1928,8 +1932,8 @@ Estructura:
 }
 /*--- MEDIA MAX-WIDTH 320px ---*/
 
-/*--- MEDIA MIN-HEIGHT 520px + MAX-WIDTH 1000px ---*/
-@media (max-height: 520px), (max-width: 1000px) {
+/*--- MEDIA MIN-HEIGHT 400px + MAX-WIDTH 1000px ---*/
+@media (max-height: 400px) and (max-width: 1000px) {
     .header .header__modal .header__modal__content .header__modal__content--links {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
