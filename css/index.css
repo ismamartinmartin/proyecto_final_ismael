@@ -5,6 +5,7 @@
 -Tipografía
 -Buttons
 -Standard section size
+-Transición opacidad
 -Header
 -Footer
 -Banner home
@@ -15,8 +16,14 @@
 -Carrousel home
 -Cards stories
 -Formulario página contacto
--Media (1000px [cuando llega al max-width de la página], 768px [tablet], 480px [móvil])
-Nota: en el media se sige el mismo orden que en la estructura del css para organizar los elementos
+-Media
+    -Min-width 1950px: para adaptar el banner de la home a pantallas muy grandes.
+    -Max-witdh 1000px: cuando llega al max-width de la página, para adaptar algunas secciones.
+    -Max-width 768px: breakpoint tablet.
+    -Max-witdh 480px: breakpoint móvil grande.
+    -Max-width 320px: breakpoint móvil petite.
+    -Max-height 520px + max-width 1000px: para adaptar el pop-up del header a pantallas horizontales con muy poca altura, es decir, móviles que el usuario gira la pantalla para visualizar el contenido.
+    Nota: en el media se sige el mismo orden que en la estructura del css para organizar los elementos
 */
 
 
@@ -221,6 +228,13 @@ a {
 }
 /*--- STANDARD SECTION SIZE ---*/
 
+/*--- OPACITY TRANSITION ---*/
+.scroll__transition {
+    opacity: 0; /*Incluido para que los elementos estén desaparecidos desde el principio*/
+    transition: opacity .4s;
+}
+/*--- OPACITY TRANSITION ---*/
+
 /*--- HEADER ---*/
 /*Descripción: header de la página que incluye el header en bruto y el pop-up al clicar en el menu hamburguesa.
 Estructura:
@@ -332,6 +346,7 @@ Estructura:
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    flex-wrap: wrap;
     gap: var(--standard-gap);
     padding: 0 2em;
     animation: opacityEffect 3s ease;
@@ -1316,6 +1331,42 @@ Estructura:
 }
 /*--- CONTACT FORM ---*/
 
+/*--- MEDIA MIN-WIDTH 1950px ---*/
+/*Este media se usa para adaptar el banner de la home a pantallas con un ancho superior a 1950px, eliminando la sección del gradiente lateral y recolocando los elementos restantes*/
+@media (min-width: 1950px) {
+    .bannerHome .bannerHome__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--standard-gap);
+
+        width: 100%;
+
+        padding-right: 0;
+
+        animation: textContent 0s;
+        animation: opacityEffect 3s ease-in-out;
+    }
+    
+    .bannerHome .bannerHome__content .bannerHome__content--gradient {
+        display: block;
+        height: 200px;
+        width: 200px;
+
+        border-radius: 100%;
+
+        background-image: url('/media/logo_gradient_color.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .bannerHome .bannerHome__colorSide {
+        display: none;
+    }
+}
+/*--- MEDIA MIN-WIDTH 1950px ---*/
 
 /*--- MEDIA MAX-WIDTH 1000px ---*/
 @media (max-width: 1000px) {
@@ -1340,7 +1391,7 @@ Estructura:
         align-items: start;
         gap: .5em;
     
-        width: 80vw;
+        width: var(--standard-max-width);
         height: 80vh;
     
         padding: var(--standard-padding);
@@ -1356,11 +1407,6 @@ Estructura:
         padding: 0 4em;
 
         width: 100%;
-    }
-
-    .header .header__modal .header__modal__content .header__modal__content--links--each {
-        color: var(--color-white);
-        align-self: center;
     }
 
     /*Footer*/
@@ -1383,13 +1429,13 @@ Estructura:
     }
     
     .footer .footer__container .footer__container__content  .footer__container__content__logo {
-        width: 80vw;
+        width: var(--standard-max-width);
     
         border-right: none; 
     }
     
     .footer .footer__container .footer__container__content  .footer__container__content__logo .footer__container__content__logo--text {
-        width: 150px; 
+        width: 100px; 
     }
     
     .footer .footer__container .footer__container__content .footer__container__content__contact {
@@ -1483,11 +1529,11 @@ Estructura:
         flex-direction: column; 
         gap: .5em; 
     
-        min-height: 750px; 
+        min-height: 700px; 
     }
     
     .cards .cards__container .cards__container__box .cards__container__box__img {
-        width: 80vw; 
+        width: var(--standard-max-width); 
         max-height: 300px; 
     
         border-radius: 0; 
@@ -1499,8 +1545,8 @@ Estructura:
     }
     
     .cards .cards__container .cards__container__box .cards__container__box__content {
-        max-width: 80vw; 
-        min-height: 450px; 
+        max-width: var(--standard-max-width); 
+        min-height: 400px; 
     }
     
     .cards .cards__container .cards__container__box .cards__container__box__content .cards__container__box__content--information {
@@ -1509,7 +1555,7 @@ Estructura:
     
         padding: 0; 
     
-        width: 80vw; 
+        width: var(--standard-max-width); 
         min-height: 200px; 
     
         border-radius: 5px 5px 0 0; 
@@ -1523,7 +1569,7 @@ Estructura:
     
     .cards .cards__container .cards__container__box .cards__container__box__content .cards__container__box__content--text {
         width: 80vw;
-        min-height: 250px; 
+        min-height: 200px; 
     
         border-radius: 0 0 5px 5px; 
     }
@@ -1575,6 +1621,10 @@ Estructura:
         font-size: 25px;
     }
 
+    h4 {
+        font-size: 23px;
+    }
+
     h5 {
         font-size: 18px;
     }
@@ -1591,11 +1641,6 @@ Estructura:
         font-size: 18px;
     }
 
-    /*Header*/
-    .header .header__modal .header__modal__content {
-        height: 100vh;
-    }
-
     /*Buttons*/
     .button {
         width: 150px;
@@ -1607,14 +1652,14 @@ Estructura:
         padding: 1em 3em;
     }
 
-    .bannerHome .bannerHome__content .bannerHome__content--text {
-        width: 200px;
-    }
-
     /*Banner home*/
     .bannerHome .bannerHome__content .bannerHome__content--gradient {
         height: 100px;
         width: 100px;
+    }
+
+    .bannerHome .bannerHome__content .bannerHome__content--text {
+        width: 200px;
     }
 
     /*Authors section home*/
@@ -1699,7 +1744,7 @@ Estructura:
     .carrousel .carrousel__slider .carrousel__slider__container .carrousel__slider__container__each .carrousel__slider__container__each--text {
         justify-content: center;
 
-        width: 80vw; 
+        width: var(--standard-max-width); 
         height: 100%; 
         background-color: rgba(255, 255, 255, 0.788);
 
@@ -1725,6 +1770,19 @@ Estructura:
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+    /*Cards*/
+    .cards .cards__container .cards__container__box {
+        min-height: 730px; 
+    }
+
+    .cards .cards__container .cards__container__box .cards__container__box__content {
+        min-height: 430px; 
+    }
+    
+    .cards .cards__container .cards__container__box .cards__container__box__content .cards__container__box__content--text {
+        min-height: 230px; 
     }
 
     /*Contact form*/
@@ -1753,26 +1811,24 @@ Estructura:
         font-size: 23px;
     }
 
+    h4 {
+        font-size: 20px;
+    }
+
     h5 {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     h6 {
-        font-size: 13px;
+        font-size: 16px;
     }
     
     p {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     a {
-        font-size: 16px;
-    }
-
-    /*Footer*/
-    .footer .footer__container .footer__container__content  .footer__container__content__logo .footer__container__content__logo--gradient {
-        width: 60px;
-        height: 60px;
+        font-size: 18px;
     }
 
     /*Buttons*/
@@ -1790,6 +1846,69 @@ Estructura:
         flex-direction: column; 
     }
 
+    .footer .footer__container .footer__container__content  .footer__container__content__logo .footer__container__content__logo--gradient {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*Contact form*/
+    .form .form__section__button {
+        justify-content: center;
+    }
+}
+/*--- MEDIA MAX-WIDTH 480px ---*/
+
+/*--- MEDIA MAX-WIDTH 320px ---*/
+@media (max-width: 480px) {
+    /*Root*/
+    :root {
+        --standard-padding: 1em;
+        --standard-gap: .7em;
+    }
+
+    /*Tipography*/
+    h1 {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    /*Buttons*/
+    .button {
+        width: 100%;
+        max-height: 80px;
+    }
+
+	/*Header*/
+    .header .header__modal .header__modal__content .header__modal__content--links {
+        padding: 0 1em;
+    }
+
+    /*Footer*/
+    .footer {
+        min-height: 240px;
+    }
+    
+    .footer .footer__container {
+        min-height: 240px;
+    }
+
+    .footer .footer__container .footer__container__content {
+        padding-bottom: 1em;
+    }
+
+    /*Banner home*/
+    .bannerHome .bannerHome__content .bannerHome__content--text {
+        width: 150px;
+    }
+
+    .bannerHome .bannerHome__content .bannerHome__content--gradient {
+        height: 80px;
+        width: 80px;
+    }
+    
     /*Cards*/
     .cards .cards__container .cards__container__box {
         min-height: 800px; 
@@ -1803,9 +1922,66 @@ Estructura:
         min-height: 300px; 
     }
 
-    /*Contact form*/
-    .form .form__section__button {
-        justify-content: center;
+    .cards .cards__container .cards__container__box .cards__container__box__content .cards__container__box__content--information {
+        padding: .5em;
     }
 }
-/*--- MEDIA MAX-WIDTH 480px ---*/
+/*--- MEDIA MAX-WIDTH 320px ---*/
+
+/*--- MEDIA MIN-HEIGHT 520px + MAX-WIDTH 1000px ---*/
+@media (max-height: 520px), (max-width: 1000px) {
+    .header .header__modal .header__modal__content .header__modal__content--links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 1em; /* Ajustar espacio entre columnas */
+        padding: 0;
+        width: 100%; /* Asegurar que ocupe todo el ancho */
+    }
+
+    .header .header__modal .header__modal__content .header__modal__content--links--each {
+        text-align: center;
+        width: 100%; /* Para asegurar que cada enlace ocupe el ancho completo de su celda */
+    }
+
+    .header__modal__content--links--each:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header__modal__content--links--each:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .header__modal__content--links--each:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .header__modal__content--links--each:nth-child(4) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .header__modal__content--links--each:nth-child(5) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .header__modal__content--links--each:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .header__modal__content--links--each:nth-child(7) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .header__modal__content--links--each:nth-child(8) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+/*--- MEDIA MIN-HEIGHT 520px + MAX-WIDTH 1000px ---*/

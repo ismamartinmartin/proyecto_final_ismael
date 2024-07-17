@@ -2,9 +2,11 @@
 /*
 -Variables menú responsive
 -Variables carrousel home
+-Variables transición opacidad
 -Menú responsive
 -Carrousel home
 -Cards stories search engine
+-Transición opacidad
 */
 
 //MENU VARIABLES
@@ -22,6 +24,10 @@ let slider = document.querySelectorAll(".carrousel__slider__container__each")
 let section = document.querySelector(".carrousel__slider__container")
 /*Indica el índice actual del carrusel*/ 
 let contador = 0
+
+//OPACITY TRANSITION VARIABLES
+/*Esta variable llama a todos aquellos elementos a los cuales se les va a aplicar la transición*/ 
+let showElement = document.querySelectorAll('.scroll__transition')
 
 //MENU
 /*Descripción: este código de JS controla la apertura y cierre de un menú (tipo pop-up) en la cabecera de una página web*/ 
@@ -113,3 +119,17 @@ function search() {
     let noResultDiv = document.querySelector(".cards__noResult")
     noResultDiv.style.display = matchFound ? "none" : "flex"
 }
+
+//OPACITY TRANSITION
+/*Al utilizar un addEventListener "scroll" hacemos que la función se ejecute cada vez que el usuario desplace la página*/
+window.addEventListener('scroll', () => {
+    /*Se llama a cada elemento de forma individual*/
+    showElement.forEach((showEach) => {
+        /*Se verifica la posición del elemento desde la ventana, por lo que si su distancia es menor que la altura de la ventana menos 150 píxeles este tendrá visibilidad y su opacidad será 1. De lo contrario, se borrará el atributo style del elemento*/
+        if (showEach.getBoundingClientRect().top < window.innerHeight - 150) {
+            showEach.style.opacity = '1'
+        } else {
+            showEach.removeAttribute('style')
+        }
+    })
+})
