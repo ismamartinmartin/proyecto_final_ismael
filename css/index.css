@@ -360,7 +360,7 @@ Estructura:
     color: var(--color-white);
 }
 
-.header__modal__content--links--each:hover, .header__modal__content--links--each:active{
+.header .header__modal .header__modal__content .header__modal__content--links--each:hover,  .header .header__modal .header__modal__content .header__modal__content--links--each:active{
     color: var(--color-grey);
 }
 
@@ -432,7 +432,7 @@ Estructura:
     color: var(--color-white);
 }
 
-.footer__container__links--each:hover, .footer__container__links--each:active {
+.footer .footer__container .footer__container__links .footer__container__links--each:hover, .footer .footer__container .footer__container__links .footer__container__links--each:active {
     color: var(--color-grey);
 }
 
@@ -498,7 +498,7 @@ Estructura:
     align-items: start;
 }
 
-.footer__container__content__contact--text:hover, .footer__container__content__contact--text:active  {
+.footer .footer__container .footer__container__content .footer__container__content__contact .footer__container__content__contact--text:hover, .footer .footer__container .footer__container__content .footer__container__content__contact .footer__container__content__contact--text:active  {
     color: var(--color-grey);
 }
 /*--- FOOTER ---*/
@@ -1326,7 +1326,7 @@ Estructura:
     cursor: pointer;
 }
 
-.form .form__section__button.form__section__button--style:hover, .form .form__section__button.form__section__button--style:active {
+.form .form__section__button .form__section__button--style:hover, .form .form__section__button .form__section__button--style:active {
     background-color: white;
     color: var(--color-black); 
 
