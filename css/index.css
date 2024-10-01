@@ -110,6 +110,7 @@
 /*--- RESET CSS ---*/
 body {
     overflow-x: hidden;
+    margin: 0;
 }
 
 * {
@@ -170,6 +171,30 @@ p {
     font-weight: 200;
 }
 
+.pbold {
+    font-family: "krub_bold";
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.pboldSmall {
+    font-family: "krub_bold";
+    font-size: 25px;
+    font-weight: 800; 
+}
+
+.pdescription {
+    font-family: "krub_medium";
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.pbig {
+    font-family: "krub_medium";
+    font-size: 18px;
+    font-weight: 200;    
+}
+
 a {
     font-family: "krub_bold";
     font-size: 20px;
@@ -217,6 +242,26 @@ a {
     background-color: var(--color-white);
     color: var(--color-black);
 }
+
+/*Botón a portfolio*/
+.buttonPortfolio {
+    padding: .5em 3em .5em 3em;
+
+    background-color: transparent;
+    border: 2px var(--color-white) solid;
+    color: var(--color-white);
+
+    border-radius: 60px;
+    width: 290px;
+    font-size: 13px;
+
+    text-align: center;
+}
+
+.buttonPortfolio:hover, .buttonPortfolio:active {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
 /*--- BUTTONS ----*/
 
 /*--- STANDARD SECTION SIZE ---*/
@@ -243,10 +288,32 @@ Estructura:
 */
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     min-height: 100px;
     width: 100vw;
+}
+
+.mensajePortfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 20px;
+    width: 100vw;
+
+    margin: 0;
+    padding: .5em 0em;
+    background-color: var(--color-black);
+}
+
+.contenidoHeader {
+    display: flex;
+    flex-direction: row;
+
+    min-height: 100px;
+    width: 100vw;  
 }
 
 .header__content {
@@ -537,7 +604,7 @@ Estructura:
     color: white;
 
     overflow: hidden;
-    animation: textContent 15s ease-in-out;
+    animation: textContent 13s ease-in-out;
 }
 
 .bannerHome .bannerHome__content .bannerHome__content--text {
@@ -566,12 +633,12 @@ Estructura:
     height: 500px;
     width: 40vw;
 
-    animation: sideColor 10s ease-in-out;
+    animation: sideColor 8s ease-in-out;
 }
 
 .bannerHome .bannerHome__colorSide .bannerHome__colorSide--text {
     opacity: 0;
-    animation: opacityEffect 3s ease-in-out;
+    animation: opacityEffect 2s;
     overflow: hidden;
 }
 
@@ -1641,6 +1708,22 @@ Estructura:
         font-size: 13px;
     }
 
+    .pbold {
+        font-size: 25px;
+    }
+
+    .pboldSmall {
+        font-size: 23px;
+    }
+
+    .pdescription {
+        font-size: 18px;
+    }
+
+    .pbig {
+        font-size: 16px;
+    }
+
     a {
         font-size: 18px;
     }
@@ -1831,6 +1914,22 @@ Estructura:
         font-size: 14px;
     }
 
+    .pbold {
+        font-size: 23px;
+    }
+
+    .pboldSmall {
+        font-size: 20px;
+    }
+
+    .pdescription {
+        font-size: 18px;
+    }
+
+    .pbig {
+        font-size: 16px;  
+    }
+
     a {
         font-size: 18px;
     }
@@ -1888,6 +1987,10 @@ Estructura:
 	/*Header*/
     .header .header__modal .header__modal__content .header__modal__content--links {
         padding: 0 1em;
+    }
+
+    .socialMediaText {
+        display: none;
     }
 
     /*Footer*/

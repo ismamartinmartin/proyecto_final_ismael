@@ -67,7 +67,7 @@ setInterval(() => {
         contador = 0;
     }
     updateSlideWidth()
-}, 5000)
+}, 3500)
 
 
 //CARDS SEARCH ENGINE
